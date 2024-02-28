@@ -1,10 +1,12 @@
 import React from 'react';
 import './mainbody.scss';
-import img from '../../assets/img/mpcl/artifical-intelligence-banner.jpg'
+import img1 from '../../assets/img/mpcl/artifical-intelligence-banner.jpg';
+import img2 from '../../assets/img/mpcl/virtualization-banner.jpg';
+
 const Data = [
   {
     id: 1,
-    imgSrc: img,
+    imgSrc: img1,
     serviceTitle: "HPC",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
@@ -78,7 +80,7 @@ const MainBody = () => {
     <section className="main container section">
       <div className="secTitle">
         <h3 className="title">
-          Our Services
+          Our Main Services
         </h3>
       </div>
 
@@ -86,7 +88,7 @@ const MainBody = () => {
         {
           Data.map(({ id, imgSrc, serviceTitle, description }) => {
             return (
-              <div className="singleDestination">
+              <div key={id} className="singleDestination">
                 <div className="imageDiv">
                   <img src={imgSrc} alt={serviceTitle} />
                 </div>

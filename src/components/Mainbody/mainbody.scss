@@ -9,8 +9,8 @@
     --greyText: rgb(190, 190, 190);
     --inputColor: rgb(239, 239, 239);
     --bodyColor: rgb(240, 240, 246);
-    --cardBG: rgb(85, 85, 76);
-
+    --cardBG: rgb(255, 255, 235);
+    --cardHover: rgb(255, 255, 255);
 }
 
 .main {
@@ -34,23 +34,68 @@
                 bottom: 5px;
                 z-index: -1;
             }
+        }
+    }
 
+    .secContent {
+        justify-content: center;
+        gap: 1.5rem;
 
-            .secContent {
-                justify-content: center;
-                gap: 1.5rem;
+        .singleDestination {
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: var(--cardBG);
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            overflow: hidden;
 
-                .singleDestination {
-                    height: 100%;
-                    display: grid;
-                    row-gap: 10px;
-                    border-radius: 10px;
-                    align-items: center;
-                    background: var(--cardBG);
-                    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
-                    overflow: hidden;
-                }
+            &:hover {
+                background: var(--cardHover);
+                box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+                transition: .3s ease;
             }
+
+            .imageDiv {
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+                
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+
+                }
+                .cardInfo{
+                    padding: 1rem;
+                }
+
+           .desc{
+            font-size: 13.5px;
+            color: var(--textColor);
+            font-weight: 500;
+           }
+
+           .btn{
+            margin-top: 1rem;
+            color: var(--whiteColor);
+            font-weight: 600;
+            justify-content: space-between;
+            gap: .5rem;
+            align-items: center;
+           }
+
+
         }
     }
 }
