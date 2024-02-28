@@ -116,4 +116,3 @@ const MainBody = () => {
 
 export default MainBody
 
-ChatGPT
