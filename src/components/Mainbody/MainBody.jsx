@@ -1,12 +1,46 @@
 import React from 'react';
 import './mainbody.scss';
-import img1 from '../../assets/img/mpcl/artifical-intelligence-banner.jpg';
-import img2 from '../../assets/img/mpcl/virtualization-banner.jpg';
+import img1 from '../../assets/img/mpcl/AI.jpg';
+import img2 from '../../assets/img/mpcl/dataCenter.jpg';
+import img3 from '../../assets/img/mpcl/HPC.jpg';
+import img4 from '../../assets/img/mpcl/networking.jpg';
+import img5 from '../../assets/img/mpcl/infrastructure.jpg';
+import img6 from '../../assets/img/mpcl/data_protection.jpg';
+import img7 from '../../assets/img/mpcl/encryption.jpg';
+import img8 from '../../assets/img/mpcl/totalOutSourcing.jpg';
+import img9 from '../../assets/img/mpcl/VDI.jpg';
+import img10 from '../../assets/img/mpcl/software.jpg';
+
+
+
 
 const Data = [
   {
     id: 1,
     imgSrc: img1,
+    serviceTitle: "AI",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+  {
+    id: 2,
+    imgSrc: img2,
+    serviceTitle: "Data Center",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  }, {
+    id: 3,
+    imgSrc: img3,
     serviceTitle: "HPC",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
@@ -16,63 +50,91 @@ const Data = [
            These include workstations, GPU accelerated systems, clusters of various sizes,
            Utilities and tools, services, training, and turn- key solutions`,
   },
-  // {
-  //   id: 2,
-  //   imgSrc: img,
-  //   title: "HPC",
-  //   description: `HPC Cluster deploy, 
-  //          manage and fine-tune.We Micropoint are one of the
-  //          leading system integrator providing solutions for HPC environment
-  //          in India.We acquired Hinditron in the year Dec 2014,
-  //          then the number 1 HPC player in the country to augment our skills.
-  //          These include workstations, GPU accelerated systems, clusters of various sizes,
-  //          Utilities and tools, services, training, and turn- key solutions`,
-  // }, {
-  //   id: 3,
-  //   imgSrc: img,
-  //   title: "HPC",
-  //   description: `HPC Cluster deploy, 
-  //          manage and fine-tune.We Micropoint are one of the
-  //          leading system integrator providing solutions for HPC environment
-  //          in India.We acquired Hinditron in the year Dec 2014,
-  //          then the number 1 HPC player in the country to augment our skills.
-  //          These include workstations, GPU accelerated systems, clusters of various sizes,
-  //          Utilities and tools, services, training, and turn- key solutions`,
-  // },
-  // {
-  //   id: 4,
-  //   imgSrc: img,
-  //   title: "HPC",
-  //   description: `HPC Cluster deploy, 
-  //          manage and fine-tune.We Micropoint are one of the
-  //          leading system integrator providing solutions for HPC environment
-  //          in India.We acquired Hinditron in the year Dec 2014,
-  //          then the number 1 HPC player in the country to augment our skills.
-  //          These include workstations, GPU accelerated systems, clusters of various sizes,
-  //          Utilities and tools, services, training, and turn- key solutions`,
-  // }, {
-  //   id: 5,
-  //   imgSrc: img,
-  //   title: "HPC",
-  //   description: `HPC Cluster deploy, 
-  //          manage and fine-tune.We Micropoint are one of the
-  //          leading system integrator providing solutions for HPC environment
-  //          in India.We acquired Hinditron in the year Dec 2014,
-  //          then the number 1 HPC player in the country to augment our skills.
-  //          These include workstations, GPU accelerated systems, clusters of various sizes,
-  //          Utilities and tools, services, training, and turn- key solutions`,
-  // }, {
-  //   id: 6,
-  //   imgSrc: img,
-  //   title: "HPC",
-  //   description: `HPC Cluster deploy, 
-  //          manage and fine-tune.We Micropoint are one of the
-  //          leading system integrator providing solutions for HPC environment
-  //          in India.We acquired Hinditron in the year Dec 2014,
-  //          then the number 1 HPC player in the country to augment our skills.
-  //          These include workstations, GPU accelerated systems, clusters of various sizes,
-  //          Utilities and tools, services, training, and turn- key solutions`,
-  // },
+  {
+    id: 4,
+    imgSrc: img4,
+    serviceTitle: "Networking",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  }, {
+    id: 5,
+    imgSrc: img5,
+    serviceTitle: "Infrastructure",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+  
+  {
+    id: 6,
+    imgSrc: img6,
+    serviceTitle: "Data Protection",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+
+  {
+    id: 7,
+    imgSrc: img7,
+    serviceTitle: "Encryption",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+  {
+    id: 8,
+    imgSrc: img8,
+    serviceTitle: "Total Out solution",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+  {
+    id: 9,
+    imgSrc: img9,
+    serviceTitle: "VID",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
+  {
+    id: 10,
+    imgSrc: img10,
+    serviceTitle: "Software",
+    description: `HPC Cluster deploy, 
+           manage and fine-tune.We Micropoint are one of the
+           leading system integrator providing solutions for HPC environment
+           in India.We acquired Hinditron in the year Dec 2014,
+           then the number 1 HPC player in the country to augment our skills.
+           These include workstations, GPU accelerated systems, clusters of various sizes,
+           Utilities and tools, services, training, and turn- key solutions`,
+  },
 ];
 
 const MainBody = () => {
