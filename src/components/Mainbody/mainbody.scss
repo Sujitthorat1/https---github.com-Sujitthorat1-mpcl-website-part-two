@@ -15,7 +15,6 @@
 
 .main {
     width: 100%;
-
     .secTitle {
         .title {
             position: relative;
@@ -67,33 +66,35 @@
                     width: 100%;
                     object-fit: cover;
                     transition: 2s ease;
-                
+
                 }
-                &:hover{
-                    img{
+
+                &:hover {
+                    img {
                         transform: scale(1.1);
                     }
                 }
 
-                }
-                .cardInfo{
-                    padding: 1rem;
-                }
+            }
 
-           .desc{
-            font-size: 13px;
-            color: var(--textColor);
-            font-weight: 500;
-           }
+            .cardInfo {
+                padding: 1rem;
+            }
 
-           .btn{
-            margin-top: 1rem;
-            color: var(--whiteColor);
-            font-weight: 600;
-            justify-content: space-between;
-            gap: .5rem;
-            align-items: center;
-           }
+            .desc {
+                font-size: 13px;
+                color: var(--textColor);
+                font-weight: 500;
+            }
+
+            .btn {
+                margin-top: 1rem;
+                color: var(--whiteColor);
+                font-weight: 600;
+                justify-content: space-between;
+                gap: .5rem;
+                align-items: center;
+            }
 
 
         }
@@ -104,29 +105,30 @@
 // ===========MEDIA QUERIES===========
 
 @media screen and (min-width:500px) {
-    .title{
+    .title {
         font-size: 1.5rem;
-        &::after{
+
+        &::after {
             width: 155px !important;
         }
     }
 
-    .secContent{
-        grid-template-columns: repeat(2,1fr);
+    .secContent {
+        grid-template-columns: repeat(2, 1fr);
 
-        .singleDestination{
+        .singleDestination {
             height: auto;
         }
     }
-    
+
 }
 
 @media screen and (min-width: 840px) {
     .secContent {
-            grid-template-columns: repeat(3, 1fr);
-    
-            .singleDestination {
-                height: auto;
-            }
+        grid-template-columns: repeat(3, 1fr);
+
+        .singleDestination {
+            height: auto;
         }
+    }
 }
