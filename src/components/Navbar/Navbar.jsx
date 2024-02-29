@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './navbar.scss';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
-
+import logo from '../../assets/img/mpcl/mpcl-black-logo.png'
 const Navbar = () => {
   const [active, setActive] = useState('navBar');
 
@@ -20,7 +20,10 @@ const Navbar = () => {
 
         <div className="logoDev">
           <a href="" className="logo flex">
-            <h1 className="icon">MPCL. </h1>
+            {/* <h1 className="icon">MPCL. </h1>
+             */}
+            
+            <img src={logo} className="logoIcon" alt="mpcl-logo" />
           </a>
 
 

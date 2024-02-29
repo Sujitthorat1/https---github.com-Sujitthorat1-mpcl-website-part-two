@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './mainbody.scss';
 import img1 from '../../assets/img/mpcl/AI.jpg';
 import img2 from '../../assets/img/mpcl/dataCenter.jpg';
@@ -9,10 +9,9 @@ import img6 from '../../assets/img/mpcl/data_protection.jpg';
 import img7 from '../../assets/img/mpcl/encryption.jpg';
 import img8 from '../../assets/img/mpcl/totalOutSourcing.jpg';
 import img9 from '../../assets/img/mpcl/VDI.jpg';
-import img10 from '../../assets/img/mpcl/software.jpg';
-
-
-
+// import img10 from '../../assets/img/mpcl/software.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Data = [
   {
@@ -21,10 +20,7 @@ const Data = [
     serviceTitle: "AI",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   },
   {
@@ -33,10 +29,7 @@ const Data = [
     serviceTitle: "Data Center",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   }, {
     id: 3,
@@ -44,10 +37,7 @@ const Data = [
     serviceTitle: "HPC",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   },
   {
@@ -56,10 +46,7 @@ const Data = [
     serviceTitle: "Networking",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   }, {
     id: 5,
@@ -67,10 +54,7 @@ const Data = [
     serviceTitle: "Infrastructure",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   },
   
@@ -80,11 +64,8 @@ const Data = [
     serviceTitle: "Data Protection",
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
-           Utilities and tools, services, training, and turn- key solutions`,
+           leading system integrator providing solutions We acquired in the year Dec 2014,
+           Utilities and tools, services, training, and turn- key solutions`, 
   },
 
   {
@@ -123,25 +104,31 @@ const Data = [
            These include workstations, GPU accelerated systems, clusters of various sizes,
            Utilities and tools, services, training, and turn- key solutions`,
   },
-  {
-    id: 10,
-    imgSrc: img10,
-    serviceTitle: "Software",
-    description: `HPC Cluster deploy, 
-           manage and fine-tune.We Micropoint are one of the
-           leading system integrator providing solutions for HPC environment
-           in India.We acquired Hinditron in the year Dec 2014,
-           then the number 1 HPC player in the country to augment our skills.
-           These include workstations, GPU accelerated systems, clusters of various sizes,
-           Utilities and tools, services, training, and turn- key solutions`,
-  },
+  // {
+  //   id: 10,
+  //   imgSrc: img10,
+  //   serviceTitle: "Software",
+  //   description: `HPC Cluster deploy, 
+  //          manage and fine-tune.We Micropoint are one of the
+  //          leading system integrator providing solutions for HPC environment
+  //          in India.We acquired Hinditron in the year Dec 2014,
+  //          then the number 1 HPC player in the country to augment our skills.
+  //          These include workstations, GPU accelerated systems, clusters of various sizes,
+  //          Utilities and tools, services, training, and turn- key solutions`,
+  // },
 ];
 
 const MainBody = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
+
   return (
     <section className="main container section">
       <div className="secTitle">
-        <h3 className="title">
+        <h3 data-aos="fade-right" className="title">
           Our Main Services
         </h3>
       </div>
@@ -150,7 +137,8 @@ const MainBody = () => {
         {
           Data.map(({ id, imgSrc, serviceTitle, description }) => {
             return (
-              <div key={id} className="singleDestination">
+              <div key={id}
+                data-aos="fade-up" className="singleDestination">
                 <div className="imageDiv">
                   <img src={imgSrc} alt={serviceTitle} />
                 </div>
