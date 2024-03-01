@@ -90,9 +90,22 @@ body {
   background: var(--bodyColor);
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (min-width:556px) {
+  .mainContent{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
+
+
 
 @media screen and (min-width:1240px) {
-
+.mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem !important;
+  }
   .container {
     width: 80% !important;
     margin: auto !important;
