@@ -105,7 +105,26 @@
 
 // ===========MEDIA QUERIES===========
 
-@media screen and (min-width:500px) {
+@media screen and (min-width:480px) {
+    .title {
+        font-size: 1.5rem;
+
+        &::after {
+            width: 155px !important;
+        }
+    }
+
+    .secContent {
+        grid-template-columns: repeat(1, 1fr);
+
+        .singleDestination {
+            height: auto;
+        }
+    }
+
+}
+
+@media screen and (min-width:580px) {
     .title {
         font-size: 1.5rem;
 
@@ -124,6 +143,10 @@
 
 }
 
+
+
+
+
 @media screen and (min-width: 840px) {
     .secContent {
         grid-template-columns: repeat(3, 1fr);
@@ -133,3 +156,4 @@
         }
     }
 }
+
