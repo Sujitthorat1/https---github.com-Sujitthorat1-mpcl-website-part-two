@@ -91,7 +91,7 @@ const Cards = () => {
                     {
                         Data.map(({ id, imgSrc, serviceTitle, location, grade }) => {
                             return (
-                                <div data-aos="zoom-in" className="singleDestination">
+                                <div data-aos="fade-up" className="singleDestination">
                                     <div className="destImage">
                                         <img src={imgSrc} alt="Image title" />
 
