@@ -62,7 +62,6 @@ const BgVideoPlayCard = () => {
                     }
                 />
             </div>
-
             <div className="cardVid">
                 <HoverVideoPlayer
                     videoSrc={bigBuckBunnySrc}
@@ -88,7 +87,6 @@ const BgVideoPlayCard = () => {
                     }
                 />
             </div>
-
             <div className="cardVid">
                 <HoverVideoPlayer
                     videoSrc={bigBuckBunnySrc}

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './navbar.scss';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
@@ -22,7 +22,7 @@ const Navbar = () => {
           <a href="" className="logo flex">
             {/* <h1 className="icon">MPCL. </h1>
              */}
-            
+
             <img src={logo} className="logoIcon" alt="mpcl-logo" />
           </a>
 
@@ -34,12 +34,17 @@ const Navbar = () => {
             <li className="navItem">
               <a href="#" className="navLink">Home</a></li>
             <li className="navItem">
-              <a href="#" className="navLink">About</a></li>
+              <a href="#" className="navLink">About MPCL</a></li>
             <li className="navItem">
-              <a href="#" className="navLink">Career</a></li>
+              <a href="#" className="navLink">Career</a>
+            </li>
+            <li className="navItem">
+              <a href="#" className="navLink">Services</a>
+            </li>
             <li className="navItem">
               <a href="#" className="navLink">Investors</a></li>
             <li className="navItem">
+
               <button className="btn">
                 <a href="" >BLOG</a>
               </button>
@@ -53,8 +58,8 @@ const Navbar = () => {
         </div>
 
         <div onClick={showNav} className="toggleNavbar">
-          <TbGridDots className='icon'/>
-          </div>
+          <TbGridDots className='icon' />
+        </div>
 
       </header>
     </section>

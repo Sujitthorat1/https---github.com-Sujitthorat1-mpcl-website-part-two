@@ -1,5 +1,6 @@
 import './App.css'
 import BgVideoPlayCard from './components/Cards/BgVideoPlayCards/BgVideoPlayCards'
+import Client from './components/Client/ClientSlieder'
 
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
@@ -14,11 +15,11 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <BgVideoPlayCard />
+      {/* <BgVideoPlayCard /> */}
       <ScrollingCards />
       {/* <Cards/> */}
       <MainBody />
-      
+      <Client/>
       <Footer />
     </>
   )
