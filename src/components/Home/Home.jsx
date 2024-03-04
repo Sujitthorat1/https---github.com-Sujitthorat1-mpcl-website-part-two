@@ -18,13 +18,17 @@ const Home = () => {
 
             <div className="homeContent container">
                 <div className="textDiv">
-                    <h1 data-aos="fade-up" className="homeTitle">
+                    <h1 data-aos="slide-right" className="homeTitle">
                         Whatever IT takes
                     </h1>
                     <span className="smallText">
-                        MPCL offers solutions for customers across many verticals. We combine state of the art IT
-                        products, project roll-out skills and our infrastructure management services and thereby
-                        cover entire lifecycle of your IT setup.
+
+                        <p data-aos="slide-left">
+                            MPCL offers solutions for customers across many verticals. We combine state of the art IT
+                            products, project roll-out skills and our infrastructure management services and thereby
+                            cover entire lifecycle of your IT setup.
+                        </p>
+
                     </span>
                     <br />
                     <button data-aos="fade-up" className="knowMoreBtn btn">

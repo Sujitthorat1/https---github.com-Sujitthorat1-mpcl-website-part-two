@@ -1,14 +1,19 @@
 import React from 'react';
 import './client.scss';
+import img1 from '../../assets/img/clients/1.jpg';
+import img2 from '../../assets/img/clients/2.jpg';
+import img3 from '../../assets/img/clients/3.jpg';
+
 
 const Client = () => {
     const row1 = [
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/a2b3c3709ffedce2a22a.png",
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/3cd767dea94a85078ca4.png",
-        // "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/3b7d9f4b073deb6a9b74.png",
+        "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/3b7d9f4b073deb6a9b74.png",
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/6591cdc0702b32310306.png",
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/b2bd91d7b87b2181ca45.png",
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/7ae42bac3b34999c0db3.png",
+
     ];
     const row2 = [
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/6c585c33ca6c71c79bb7.png",
@@ -19,11 +24,22 @@ const Client = () => {
         "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/52d8f54e445899c1e716.png",
     ];
 
+    const row3 = [
+        // "https://i.ibb.co/xF125Gb/28.png",
+        // "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/35e044b3354aaa0caed5.png",
+        // "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/0384060dcbf73b6a707c.png",
+        // "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/9dd55e54b5a28658bf4e.png",
+        img1,img2,img3,
+        "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/52d8f54e445899c1e716.png",
+        "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/9dd55e54b5a28658bf4e.png",
+        "https://assets.algoexpert.io/spas/main/prod/gdd78299e67-prod/dist/images/52d8f54e445899c1e716.png",
+    ];
+
     return (
         <div className="app-container">
             <div className="wrapper">
-                <div className="text">With Greatest Customers</div>
-                <div className="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                <div className="text" data-aos="slide-right">With Greatest Customers</div>
+                <div className="note " data-aos="slide-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
                 <div className="marquee">
                     <div className="marquee-group">
                         {row1.map((el, index) => (
@@ -60,20 +76,21 @@ const Client = () => {
 
                 <div className="marquee">
                     <div className="marquee-group">
-                        {row2.map((el, index) => (
+                        {row3.map((el, index) => (
                             <div className="image-group" key={index}>
                                 <img className='clientIcons' src={el} alt={`Image ${index + 1}`} />
                             </div>
                         ))}
                     </div>
                     <div className="marquee-group">
-                        {row2.map((el, index) => (
+                        {row3.map((el, index) => (
                             <div className="image-group" key={index}>
                                 <img className='clientIcons' src={el} alt={`Image ${index + 1}`} />
                             </div>
                         ))}
                     </div>
                 </div>
+
             </div>
         </div>
     );
