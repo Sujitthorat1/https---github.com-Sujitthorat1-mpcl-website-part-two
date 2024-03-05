@@ -2,6 +2,7 @@ import './App.css'
 import BgVideoPlayCard from './components/Cards/BgVideoPlayCards/BgVideoPlayCards'
 import CaseStudy from './components/CaseStudy/index'
 import Client from './components/Client/ClientSlieder'
+import Directors from './components/Directors/Directors'
 
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
@@ -21,7 +22,8 @@ function App() {
       <ScrollingCards />
       {/* <Cards/> */}
       <MainBody />
-      <CaseStudy/>
+      <CaseStudy />
+      <Directors/>
       <Client />
       <Testimonial/>
       <Footer />

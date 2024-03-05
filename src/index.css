@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-:root {
+/* :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
   --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
@@ -25,7 +25,29 @@
   --secondary-text-color: #ffffff;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
+} */
+:root {
+  --PrimaryColor: hsl(16, 100%, 66%);
+  --SecondaryColor: hsl(239, 100%, 15%);
+  --gradientColor: linear-gradient(to right, hsla(235, 90%, 72%, 0.336), hsl(212, 100%, 50%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 0%);
+  --textColor: hsl(240, 2%, 22%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgba(242, 222, 236, 0.992);
+  --background-color: #f6f6f6;
+  --foreground-color: #003cff;
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #ffffff;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
 }
+
+
+
 [data-theme="dark"] {
   --background-color: #0a0a0a;
   --foreground-color: #567aff;

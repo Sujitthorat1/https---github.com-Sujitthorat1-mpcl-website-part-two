@@ -68,8 +68,6 @@ const Navbar = () => {
                   <a href="#">Large Scale IT asset roll-out</a>
                   <a href="#">MGT-7 22-23</a>
                   <a href="#">Networking and Security Solutions</a>
-
-
                 </div>
               )}
             </li>

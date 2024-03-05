@@ -27,7 +27,7 @@
             &::after {
                 position: absolute;
                 content: '';
-                background: var(--SecondaryColor);
+                // background: var(--SecondaryColor);
                 height: 5px;
                 width: 120px;
                 right: 0;
@@ -156,4 +156,3 @@
         }
     }
 }
-
