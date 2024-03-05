@@ -21,11 +21,11 @@ function App() {
       {/* <BgVideoPlayCard /> */}
       <ScrollingCards />
       {/* <Cards/> */}
-      <MainBody />
+      {/* <MainBody /> */}
       <CaseStudy />
-      <Directors/>
+      <Directors />
       <Client />
-      <Testimonial/>
+      <Testimonial />
       <Footer />
     </>
   )
