@@ -83,7 +83,7 @@ const Navbar = () => {
             </li>
             <li className="navItem">
               <a href="#" className="navLink">
-                Investors
+                Contact US
               </a>
             </li>
             <li className="navItem">
