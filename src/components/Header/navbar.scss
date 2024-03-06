@@ -1,6 +1,7 @@
 :root {
     --PrimaryColor: hsl(199, 100%, 33%);
-    --SecondaryColor: hsl(187, 85%, 43%);
+    // --SecondaryColor: hsl(187, 85%, 43%);
+    --SecondaryColor: hsl(239, 100%, 15%);
     --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
     --whiteColor: hsl(0, 0%, 100%);
     --blackColor: hsl(201, 33%, 16%);
@@ -65,6 +66,7 @@
                         color: var(--textColor);
                         font-size: 0.9rem;
                         font-weight: 600;
+                        text-decoration: none !important;
 
                         &:hover {
                             color: var(--PrimaryColor);
@@ -73,11 +75,11 @@
                 }
 
                 .btn {
-                    margin-top: 1rem;
+                    margin-top: 1rem !important;
 
                     a {
-                        font-weight: 600;
-                        color: var(--whiteColor);
+                        font-weight: 600 !important;
+                        color: var(--whiteColor) !important;
                     }
                 }
             }
@@ -105,16 +107,16 @@
             color: var(--PrimaryColor);
         }
 
-        &:hover.icon {
+        &:hover .icon {
             color: var(--SecondaryColor);
         }
     }
 
     .aboutDropdown {
         position: absolute;
-        top: calc(100% + 0.5rem); // Adjust the distance from the parent item as needed
+        top: calc(100% + 0.5rem);
         left: 0;
-        display: none; // Initially hide the dropdown
+        display: none;
         flex-direction: column;
         background-color: var(--whiteColorDeam);
         box-shadow: 0 2px 4px rgba(2, 15, 29, 0.984);
@@ -126,8 +128,7 @@
         text-align: start;
 
         a {
-            // color: var(--textColor);
-            color: black;
+            color: black!important;
             text-decoration: none;
             padding: 0.2rem;
             font-size: 0.9rem;
@@ -140,18 +141,10 @@
     }
 
     .navItem {
-        position: relative; // Required for absolute positioning
+        position: relative;
 
         &:hover .aboutDropdown {
-            display: flex; // Show the dropdown on hover
-        }
-    }
-
-    .navItem {
-        position: relative; // Required for absolute positioning
-
-        &:hover .aboutDropdown {
-            display: flex; // Show the dropdown on hover
+            display: flex;
         }
     }
 }
@@ -172,7 +165,7 @@
 
             .navItem {
                 .navLink {
-                    color: var(--textColor);
+                    color: var(--textColor)!important;
                     padding: 0 0.45rem;
                     font-size: 0.9rem;
                     font-weight: 500;
@@ -184,13 +177,15 @@
             }
 
             .btn {
-                margin-left: 1rem;
+                margin-left: 1rem !important;
 
                 a {
-                    color: var(--whiteColor);
+                    color: var(--whiteColor)!important;
                     font-weight: 500;
                 }
             }
+
+
         }
     }
 }

@@ -62,7 +62,13 @@ html {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: var(--SecondaryColor) !important;
+  
 }
 
 li {
@@ -95,7 +101,7 @@ li {
 
 .btn {
   padding: .6rem 1.5rem;
-  background: var(--gradientColor);
+  background: var(--gradientColor) !important;
   border-radius: 3rem;
   border: none;
   outline: none;
@@ -103,13 +109,14 @@ li {
 }
 
 .btn a {
-  color: var(--whiteColor);
+  color: var(--whiteColor) !important;
   font-weight: 500;
 }
 
 
 .btn:hover {
-  background: var(--SecondaryColor);
+  background: var(--SecondaryColor) !important;
+
 }
 
 img,

@@ -4,12 +4,12 @@ import 'aos/dist/aos.css';
 import './scrollingCards.scss';
 import { BsArrowLeftShort, BsArrowRightShort, BsDot } from 'react-icons/bs';
 
-import img1 from '../../../assets/img/mpcl/HPC.jpg';
-import img2 from '../../../assets/img/mpcl/AI.jpg';
-import img3 from '../../../assets/img/mpcl/dataScience.jpg';
-import img4 from '../../../assets/img/mpcl/data_protection.jpg';
-import img5 from '../../../assets/img/mpcl/dataCenter.jpg';
-import img6 from '../../../assets/img/mpcl/encryption.jpg';
+import img1 from '../../assets/img/mpcl/HPC.jpg';
+import img2 from '../../assets/img/mpcl/AI.jpg';
+import img3 from '../../assets/img/mpcl/dataScience.jpg';
+import img4 from '../../assets/img/mpcl/data_protection.jpg';
+import img5 from '../../assets/img/mpcl/dataCenter.jpg';
+import img6 from '../../assets/img/mpcl/encryption.jpg';
 
 const Data = [
     {

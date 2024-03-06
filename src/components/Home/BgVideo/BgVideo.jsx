@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
-import './home.scss';
-import bgVideo from '../../assets/img/mpcl/bg-img.mp4';
-import img from '../../assets/img/mpcl/AI.jpg'
+import './bgVideo.scss';
+import bgVideo from '../../../assets/img/mpcl/bg-img.mp4';
+// import img from '../../../assets/img/mpcl/AI.jpg'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const Home = () => {
+const BgVideo = () => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
 
     return (
-        <section className="home">
+        <section className="BgVideo">
             <div className="overlay"></div>
 
             <video src={bgVideo} muted autoPlay loop type="video/mp4"></video>
 
-            <div className="homeContent container">
+            <div className="BgVideoContent container">
                 <div className="textDiv">
-                    <h1 data-aos="slide-right" className="homeTitle">
+                    <h1 data-aos="slide-right" className="BgVideoTitle">
                         Whatever IT takes
                     </h1>
                     <span className="smallText">
@@ -48,4 +48,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default BgVideo;
