@@ -9,7 +9,7 @@ const routes = [
     },
     {
         components: <About />,
-        to: '/about',
+        to: '/career',
     },
     {
         components: <ContactUs />,
