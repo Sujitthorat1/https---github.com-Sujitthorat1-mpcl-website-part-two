@@ -8,6 +8,7 @@ import Directors from '../Directors/Directors';
 import Client from '../Client/ClientSlider';
 import Testimonial from '../Testimonial';
 import Navbar from '../Header/Navbar';
+import Faq from '../FAQ/Faq';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Directors />
             <Client />
             <Testimonial />
+            <Faq/>
             {/* <Footer /> */}
             {/* <BgVideoPlayCard /> */}
             {/* <ScrollingCards /> */}

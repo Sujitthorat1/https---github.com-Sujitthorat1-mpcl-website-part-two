@@ -1,4 +1,5 @@
 import About from "../components/About/About";
+import Career from "../components/Career/Career";
 import ContactUs from "../components/ContactUs/ContactUs";
 import Home from "../components/Home/HomePage";
 
@@ -8,7 +9,7 @@ const routes = [
         to: '/',
     },
     {
-        components: <About />,
+        components: <Career />,
         to: '/career',
     },
     {

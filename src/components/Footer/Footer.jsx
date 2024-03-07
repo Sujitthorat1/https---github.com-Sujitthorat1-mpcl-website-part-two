@@ -42,11 +42,11 @@ const Footer = () => {
         <div className="footerCard flex">
           <div className="footerIntro flex">
             <div className="logoDiv">
-              <a href="#" className='logo flex'>
+              <a to="/" className='logo flex '>
                 MPCL .
               </a>
             </div>
-            <div data-aos="fade-up"  className="footerParagraph">
+            <div data-aos="fade-up" className="footerParagraph">
               Lorem ipsum dolor, sit amet consectetur
               adipisicing elit. Assumenda quam nostrum
               blanditiis quaerat. Dolorum repellat iste

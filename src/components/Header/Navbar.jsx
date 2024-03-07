@@ -26,7 +26,7 @@ const Navbar = () => {
     <section className="navBarSection">
       <header className="header flex">
         <div className="logoDev">
-          <Link to="#" className="logo flex">
+          <Link Link="/" className="logo flex">
             <img src={logo} className="logoIcon" alt="mpcl-logo" />
           </Link>
         </div>
@@ -39,12 +39,15 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="navItem">
-              <Link href="/" className="navLink " onClick={toggleAboutDropdown}>
+              <Link to="/" className="navLink " onClick={toggleAboutDropdown}>
                 About MPCL
               </Link>
               {showAboutDropdown && (
                 <div className="aboutDropdown">
                   {/* Add your dropdown content here */}
+                  <NavLink to="/aboutMpcl/about">About</NavLink>
+                  <NavLink to="/aboutMpcl/gallery">Gallery</NavLink>
+
                   <Link href="#">Annual Return</Link>
                   <Link href="#">Artificial Intelligence</Link>
                   <Link href="#">Big Data</Link>
@@ -72,12 +75,12 @@ const Navbar = () => {
               )}
             </li>
             <li className="navItem">
-              <NavLink to="/about" className="navLink">
+              <NavLink to="/career" className="navLink">
                 Career
               </NavLink>
             </li>
             <li className="navItem">
-              <Link href="#" className="navLink">
+              <Link to="/services" className="navLink">
                 Services
               </Link>
             </li>

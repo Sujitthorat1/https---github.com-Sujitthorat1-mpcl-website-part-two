@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* :root {
+:root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
   --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
@@ -25,8 +25,8 @@
   --secondary-text-color: #ffffff;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
-} */
-:root {
+}
+/* :root {
   --PrimaryColor: hsl(16, 100%, 66%);
   --SecondaryColor: hsl(239, 100%, 15%);
   --gradientColor: linear-gradient(to right, hsla(235, 90%, 72%, 0.336), hsl(212, 100%, 50%));
@@ -44,18 +44,18 @@
   --secondary-text-color: #ffffff;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
-}
+} */
 
 
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --background-color: #0a0a0a;
   --foreground-color: #567aff;
   --primary-text-color: #f6f6f6;
   --secondary-text-color: #0a0a0a;
   --toggle-bg: #283452;
   --toggle-fg: #00a6ff;
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -66,9 +66,9 @@ a {
 }
 
 a:hover {
-  text-decoration: underline !important;
-  text-decoration-color: var(--SecondaryColor) !important;
-  
+  /* text-decoration: underline !important; */
+  color: var(--PrimaryColor)!important;
+  /* text-decoration-color: var(--PrimaryColor) !important; */
 }
 
 li {
@@ -116,6 +116,7 @@ li {
 
 .btn:hover {
   background: var(--SecondaryColor) !important;
+  color: var(--whiteColor)! important;
 
 }
 
@@ -139,6 +140,11 @@ body {
   .mainContent {
     grid-template-columns: repeat(2, 1fr);
   }
+    .btn:hover {
+      background: var(--SecondaryColor) !important;
+      color: var(--whiteColor) ! important;
+  
+    }
 
 }
 
