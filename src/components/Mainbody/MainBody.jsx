@@ -12,6 +12,7 @@ import img9 from '../../assets/img/mpcl/VDI.jpg';
 // import img10 from '../../assets/img/mpcl/software.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Data = [
   {
@@ -152,7 +153,7 @@ const MainBody = () => {
                   </div>
 
                   <button className="btn flex">
-                    DETAILS
+                   <Link to="/">DETAILS</Link> 
                   </button>
                 </div>
               </div>
