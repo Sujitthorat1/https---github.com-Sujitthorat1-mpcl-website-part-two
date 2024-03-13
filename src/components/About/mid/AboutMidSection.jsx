@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './aboutMid.scss'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 const data = [
 
   {
@@ -52,12 +54,16 @@ const data = [
 ];
 
 const AboutMidSection = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className='container aboutMidContent'>
-      <h1>About Micropoint Computers PVT.Ltd</h1>
+      <h1 data-aos="slide-up">About Micropoint Computers PVT.Ltd</h1>
       <hr />
       {data.map((data, index) => (
-        <div key={index}>
+        <div data-aos="slide-up" key={index}>
           <h2>{data.title}</h2>
           {data.content && <div><p>{data.content}</p></div>}
           <hr />
@@ -65,7 +71,7 @@ const AboutMidSection = () => {
       ))}
 
 
-      <p className='lastText'>
+      <p data-aos="slide-up" className='lastText'>
         The trust and faith extended to us by our valued customers has accomplished our mission to Build, Manage, Operate and Innovate Technology for our customers. This we call the BMOI effect.
       </p>
 

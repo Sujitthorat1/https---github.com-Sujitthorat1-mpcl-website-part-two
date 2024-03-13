@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './bgVideo.scss';
-import bgVideo from '../../../assets/img/mpcl/bg-img.mp4';
+// import bgVideo from '../../../assets/img/mpcl/bg-img.mp4';
+import bgVideo from '../../../assets/img/mpcl/bg-vid.mp4';
+
 // import img from '../../../assets/img/mpcl/AI.jpg'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
