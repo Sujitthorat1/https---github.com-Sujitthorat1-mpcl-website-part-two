@@ -58,7 +58,7 @@ const Data = [
            leading system integrator providing solutions We acquired in the year Dec 2014,
            Utilities and tools, services, training, and turn- key solutions`,
   },
-  
+
   {
     id: 6,
     imgSrc: img6,
@@ -66,7 +66,7 @@ const Data = [
     description: `HPC Cluster deploy, 
            manage and fine-tune.We Micropoint are one of the
            leading system integrator providing solutions We acquired in the year Dec 2014,
-           Utilities and tools, services, training, and turn- key solutions`, 
+           Utilities and tools, services, training, and turn- key solutions`,
   },
 
   {
@@ -153,7 +153,7 @@ const MainBody = () => {
                   </div>
 
                   <button className="btn flex">
-                   <Link to="/">DETAILS</Link> 
+                    <Link to="/services/ai">DETAILS</Link>
                   </button>
                 </div>
               </div>

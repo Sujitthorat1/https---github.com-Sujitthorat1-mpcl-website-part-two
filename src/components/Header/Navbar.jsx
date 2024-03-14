@@ -1,5 +1,5 @@
 // Navbar.js
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import './navbar.scss';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
@@ -44,7 +44,7 @@ const Navbar = () => {
               </Link>
               {showAboutDropdown && (
                 <div className="aboutDropdown">
-                  {/* Add your dropdown content here */}
+                
                   <NavLink to="/aboutMpcl/about">About</NavLink>
                   <NavLink to="/aboutMpcl/gallery">Gallery</NavLink>
 
@@ -52,13 +52,7 @@ const Navbar = () => {
                   <Link href="#">Artificial Intelligence</Link>
                   <Link href="#">Big Data</Link>
                   <Link href="#">Gallery</Link>
-                  {/* <a href="#">Buy authentic HP business laptop backpack</a>
-                  <a href="#">Buy authentic HP laptop battery for better performance</a>
-                  <a href="#">Buying authentic HP accessories for better productivity</a>
-                  <a href="#">Careers</a>
-                  <a href="#">Contact Us</a>
-                  <a href="#">CSR Policy</a>
-                  <a href="#">Data Centre</a> */}
+             
                   <Link href="#">Data Encryption and Key Management Solutions</Link>
                   <Link href="#">Data Protection and Disaster Management</Link>
                   <Link href="#">Data Science Platform</Link>
@@ -110,3 +104,195 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+*/
+import React, { useState, useEffect } from "react";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import styles from "./navbar.module.css";
+import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import logo from "../../assets/img/mpcl/mpcl-black-logo.png";
+
+const NavbarMain = () => {
+  const [showAbout, setShowAbout] = useState(false);
+  const [showService, setShowService] = useState(false);
+  const [showInvestors, setShowInvestors] = useState(false);
+  const [activeNav, setActiveNav] = useState([true, false, false, false]);
+
+  const closeNav = () => {
+    setShowAbout(false);
+    setShowService(false);
+    setShowInvestors(false);
+  };
+
+  const showAboutDropdown = () => {
+    setShowAbout(true);
+  };
+
+  const hideAboutDropdown = () => {
+    setShowAbout(false);
+  };
+
+  const showServiceDropdown = () => {
+    setShowService(true);
+  };
+
+  const hideServiceDropdown = () => {
+    setShowService(false);
+  };
+
+  const showInvestorsDropdown = () => {
+    setShowInvestors(true);
+  };
+
+  const hideInvestorsDropdown = () => {
+    setShowInvestors(false);
+  };
+
+  useEffect(() => {
+    if (sessionStorage.getItem("NavbarMain") != null) {
+      let temp = JSON.parse(sessionStorage.getItem("NavbarMain"));
+      setActiveNav([...temp]);
+    }
+  }, []);
+
+  const handleActiveNav = (i) => {
+    let temp = activeNav;
+    temp = temp.map((x) => (x = false));
+    temp[i] = true;
+    setActiveNav([...temp]);
+    sessionStorage.setItem("NavbarMain", JSON.stringify(temp));
+  };
+
+  return (
+    <>
+      <Navbar
+        style={{
+          backgroundColor: "white",
+          boxShadow: "1px 1px 10px rgb(0 0 0 / 0.4)",
+        }}
+        variant="light"
+        expand="lg"
+        sticky="top"
+        onToggle={() => { closeNav() }}
+      >
+        <Container>
+          <Navbar.Brand href="/" className={styles.lo}>
+            <img src={logo} alt="mpcl-log.png" className={styles.imageLogo} />
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav style={{ marginLeft: 'auto' }}>
+              <NavLink
+                to="/"
+                className={`${styles.nav_text} nav-link ${activeNav[0] ? styles.active : ""}`}
+                style={{ marginTop: "8px" }}
+                onClick={() => { handleActiveNav(0); closeNav() }}
+              >
+                Home
+              </NavLink>
+
+              {/* Gallery */}
+              <NavLink
+                to="/gallery"
+                className={`${styles.nav_text} nav-link ${activeNav[3] ? styles.active : ""}`}
+                style={{ marginTop: "8px" }}
+                onClick={() => { handleActiveNav(3); closeNav() }}
+              >
+                Gallery
+              </NavLink>
+              {/* Contact us */}
+              <NavLink
+                to="/contactUs"
+                className={`${styles.nav_text} nav-link ${activeNav[3] ? styles.active : ""}`}
+                style={{ marginTop: "8px" }}
+                onClick={() => { handleActiveNav(3); closeNav() }}
+              >
+                Contact Us
+              </NavLink>
+              {/* About us */}
+              <NavDropdown
+                show={showAbout}
+                onMouseEnter={showAboutDropdown}
+                onMouseLeave={hideAboutDropdown}
+                className={`nav-link ${styles.drop} `}
+                title={
+                  <Link to="/about" style={{ textDecoration: 'none' }} className={styles.dropicon} onClick={() => { handleActiveNav(1); closeNav() }}>
+                    <span className={`${styles.nav_text} my-auto ${activeNav[1] ? styles.active : ""}`}>
+                      About
+                    </span>
+                  </Link>
+                }
+                id="basic-nav-dropdown-about"
+              >
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/about/team" onClick={() => { handleActiveNav(1); closeNav() }} className={styles.dropdownText}>Team</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/about/history" onClick={() => { handleActiveNav(1); closeNav() }} className={styles.dropdownText}>History</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/about/career" onClick={() => { handleActiveNav(1); closeNav() }} className={styles.dropdownText}>Career</Link></NavDropdown.Item>
+
+              </NavDropdown>
+
+              {/* Services */}
+              <NavDropdown
+                show={showService}
+                onMouseEnter={showServiceDropdown}
+                onMouseLeave={hideServiceDropdown}
+                className={`nav-link ${styles.drop}`}
+                title={
+                  <Link to="/services" style={{ textDecoration: 'none' }} className={styles.dropicon} onClick={() => { handleActiveNav(2); closeNav() }}>
+                    <span className={`${styles.nav_text} my-auto ${activeNav[2] ? styles.active : ""}`}>
+                      Services
+                    </span>
+                  </Link>
+                }
+                id="basic-nav-dropdown-service"
+              >
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services/ai" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Artificial Intelligence</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Big data</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Accessories</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Data Center </Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Data Encryption & Key Management Solution</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Data Protection & Disaster Management </Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Data Science platform</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> FMS</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> GPA & FPGA Solutions</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> HPC</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Hyper Convergence</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> Infrastructure Consolidation </Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/services" onClick={() => { handleActiveNav(2); closeNav() }} className={styles.dropdownText}> NVIDIA</Link></NavDropdown.Item>
+
+                {/* ... (other dropdown items) */}
+              </NavDropdown>
+
+
+              {/* Investors */}
+              <NavDropdown
+                show={showInvestors}
+                onMouseEnter={showInvestorsDropdown}
+                onMouseLeave={hideInvestorsDropdown}
+                className={`nav-link ${styles.drop}`}
+                title={
+                  <Link to="/" style={{ textDecoration: 'none' }} className={styles.dropicon} onClick={() => { handleActiveNav(5); closeNav() }}>
+                    <span className={`${styles.nav_text} my-auto ${activeNav[5] ? styles.active : ""}`}>
+                      Investors
+                    </span>
+                  </Link>
+                }
+                id="basic-nav-dropdown-investors"
+              >
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/investors/policies" onClick={() => { handleActiveNav(5); closeNav() }} className={styles.dropdownText}>Policies</Link></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><Link to="/investors/annulReturns" onClick={() => { handleActiveNav(5); closeNav() }} className={styles.dropdownText}>Annual returns</Link></NavDropdown.Item>
+
+              </NavDropdown>
+
+
+
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
+  );
+};
+
+export default NavbarMain;

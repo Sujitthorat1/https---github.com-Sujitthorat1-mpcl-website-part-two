@@ -1,6 +1,3 @@
-
-
-
 // Import necessary dependencies and styles
 import React from 'react';
 import LightGallery from 'lightgallery/react';
@@ -13,16 +10,17 @@ import 'lightgallery/scss/lg-zoom.scss';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import './galleryComponent.scss'
+import { Link } from 'react-router-dom';
 // Import your images
 const imageUrls = [
     {
-        src: "https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-06.jpg", alt: "Meeting with NVIDIA team"
+        src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-06.jpg', alt: 'Meeting with NVIDIA team'
     },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-07.jpg', alt: "" },
     { scr: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-08.jpg', alt: "" },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-09.jpg', alt: "" },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-16.jpg', alt: "" },
-    { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-17.jpg', alt:"" },
+    { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-17.jpg', alt: "" },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-01.jpg', alt: "" },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-02.jpg', alt: "" },
     { src: 'https://www.mpcl.in/wp-content/uploads/2020/05/gallery-img-03.jpg', alt: "" },
