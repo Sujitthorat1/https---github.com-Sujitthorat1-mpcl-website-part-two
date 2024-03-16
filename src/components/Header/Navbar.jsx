@@ -205,9 +205,9 @@ const NavbarMain = () => {
               {/* Contact us */}
               <NavLink
                 to="/contactUs"
-                className={`${styles.nav_text} nav-link ${activeNav[3] ? styles.active : ""}`}
+                className={`${styles.nav_text} nav-link ${activeNav[4] ? styles.active : ""}`}
                 style={{ marginTop: "8px" }}
-                onClick={() => { handleActiveNav(3); closeNav() }}
+                onClick={() => { handleActiveNav(4); closeNav() }}
               >
                 Contact Us
               </NavLink>

@@ -6,6 +6,7 @@ import bgVideo from '../../../assets/img/mpcl/bg-vid.mp4';
 // import img from '../../../assets/img/mpcl/AI.jpg'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const BgVideo = () => {
     useEffect(() => {
@@ -34,7 +35,8 @@ const BgVideo = () => {
                     </span>
                     <br />
                     <button data-aos="fade-up" className="knowMoreBtn btn">
-                        <a href="#">Know more</a>
+                        <Link to="/about">Know more</Link>
+                        
                     </button>
                 </div>
             </div>

@@ -21,7 +21,7 @@ const Home = () => {
             <Directors />
             <Client />
             <Testimonial />
-            <Faq/>
+            <Faq />
             {/* <Footer /> */}
             {/* <BgVideoPlayCard /> */}
             {/* <ScrollingCards /> */}
