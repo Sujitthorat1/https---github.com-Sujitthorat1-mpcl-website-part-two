@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './bgVideo.scss';
 // import bgVideo from '../../../assets/img/mpcl/bg-img.mp4';
 import bgVideo from '../../../assets/img/mpcl/bg-vid.mp4';
+import bgVideo1 from '../../../assets/vid/web-car.mp4';
 
 // import img from '../../../assets/img/mpcl/AI.jpg'
 import Aos from 'aos';
@@ -17,7 +18,7 @@ const BgVideo = () => {
         <section className="BgVideo">
             <div className="overlay"></div>
 
-            <video src={bgVideo} muted autoPlay loop type="video/mp4"></video>
+            <video src={bgVideo1} muted autoPlay loop type="video/mp4"></video>
 
             <div className="BgVideoContent container">
                 <div className="textDiv">
@@ -36,7 +37,7 @@ const BgVideo = () => {
                     <br />
                     <button data-aos="fade-up" className="knowMoreBtn btn">
                         <Link to="/about">Know more</Link>
-                        
+
                     </button>
                 </div>
             </div>

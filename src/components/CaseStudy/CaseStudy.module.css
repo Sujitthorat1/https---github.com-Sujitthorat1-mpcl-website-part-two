@@ -1,3 +1,7 @@
+.caseStudyMain {
+    background-color: rgb(193, 203, 255);
+}
+
 .contain {
     padding: 100px;
     margin-bottom: 0px;
@@ -63,7 +67,7 @@
     cursor: pointer;
 }
 
-.img:hover {
+.caseStudyImg:hover {
     transform: scale(1.04);
     transition: .5s;
 }

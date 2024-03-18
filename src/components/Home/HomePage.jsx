@@ -9,14 +9,19 @@ import Client from '../Client/ClientSlider';
 import Testimonial from '../Testimonial';
 import Navbar from '../Header/Navbar';
 import Faq from '../FAQ/Faq';
+import BgVideoPlayCard from '../Cards/BgVideoPlayCards/BgVideoPlayCards';
+import VideoPlayCards from '../Cards/VideoPlayCards/VideoPlayCards';
 
 const Home = () => {
     return (
         <>
             {/* <Navbar /> */}
             <BgVideo />
-            <ScrollingCards />
+            {/* <BgVideoPlayCard /> */}
+            <VideoPlayCards />
+
             <CaseStudy />
+            <ScrollingCards />
             <MainBody />
             <Directors />
             <Client />
