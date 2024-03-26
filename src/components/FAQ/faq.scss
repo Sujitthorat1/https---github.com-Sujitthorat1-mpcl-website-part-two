@@ -18,8 +18,13 @@
     --toggle-fg: #ffd000;
 }
 
+.faqContainer {
+    background-color: rgb(251, 244, 245);
+    padding-top: 10px;
+}
+
 .faq {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 
     .section-title {
         text-align: center;

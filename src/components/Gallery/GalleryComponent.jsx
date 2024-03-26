@@ -40,7 +40,7 @@ const imageUrls = [
 const GalleryComponents = () => {
     return (
         <div className='mainGallerySection '>
-
+ 
             <div className='galleryContainer '>
                 {/* Use LightGallery component */}
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>

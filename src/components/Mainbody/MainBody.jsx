@@ -127,43 +127,46 @@ const MainBody = () => {
 
 
   return (
-    <section className="main container section">
-      <div className="secTitle">
-        <h3 data-aos="fade-right" className="title">
-          Our Main Services
-        </h3>
-      </div>
 
-      <div className="secContent grid">
-        {
-          Data.map(({ id, imgSrc, serviceTitle, description }) => {
-            return (
-              <div key={id}
-                data-aos="fade-up" className="singleDestination">
-                <div className="imageDiv">
-                  <img src={imgSrc} alt={serviceTitle} />
-                </div>
+    <div className="popuLarServices">
+      <div className="main container section">
+        <div className="secTitle">
+          <p data-aos="fade-right" className="title">
+            Our Main Services
+          </p>
+        </div>
 
-                <div className="cardInfo">
-                  <h4 className="serviceTitle">
-                    {serviceTitle}
-                  </h4>
-                  <div className="desc">
-                    <p>{description}</p>
+        <div className="secContent grid">
+          {
+            Data.map(({ id, imgSrc, serviceTitle, description }) => {
+              return (
+                <div key={id}
+                  data-aos="fade-up" className="singleDestination">
+                  <div className="imageDiv">
+                    <img src={imgSrc} alt={serviceTitle} />
                   </div>
 
-                  <button className="btn flex">
-                    <Link to="/services/ai">DETAILS</Link>
-                  </button>
+                  <div className="cardInfo">
+                    <h4 className="serviceTitle">
+                      {serviceTitle}
+                    </h4>
+                    <div className="desc">
+                      <p>{description}</p>
+                    </div>
+
+                    <button className="btn flex">
+                      <Link to="/services/ai">DETAILS</Link>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )
-          })
-        }
+              )
+            })
+          }
+        </div>
+
+
       </div>
-
-
-    </section>
+    </div>
   )
 }
 

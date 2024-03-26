@@ -10,7 +10,7 @@ const Policies = () => {
                 data={pdfFile}
                 type="application/pdf"
                 width="100%"
-                height="700px"
+                height="800px"
             >
                 <p>Sorry, your browser does not support embedded PDFs.</p>
             </object>

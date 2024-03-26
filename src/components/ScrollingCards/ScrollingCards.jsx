@@ -76,8 +76,8 @@ const ScrollingCards = () => {
     };
 
     return (
-        <section className="popular section container">
-            <div className="secContainer">
+        <section className="popular section ">
+            <div className="secContainer container">
                 <div className="secHeader flex">
                     <div className="textDiv">
                         <h2 className="secTitle">Popular services</h2>

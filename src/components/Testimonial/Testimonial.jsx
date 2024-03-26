@@ -26,61 +26,63 @@ function Testimonial() {
     };
 
     return (
-        <div className={` ${styles.containerTestimonial} overflow-hidden`}>
-            <div className="container">
-                <p data-aos="slide-right" className={styles.head}>
-                    Our Testimonial
-                </p>
-                <p data-aos="slide-left" className={styles.subHead}>
-                    Our trusted client review
-                </p>
+        <div className={`${styles.testimonialMain}`}>
+            <div className={` ${styles.containerTestimonial} overflow-hidden`}>
+                <div className="container">
+                    <p data-aos="slide-right" className={styles.head}>
+                        Our Testimonial
+                    </p>
+                    <p data-aos="slide-left" className={styles.subHead}>
+                        Our trusted client review
+                    </p>
+                </div>
+
+                <Carousel
+                    swipeable={true}
+                    draggable={true}
+                    showDots={true}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    keyBoardControl={false}
+                    customTransition="transform 400ms ease-in-out"
+                    transitionDuration={500}
+                    containerClass={`carousel-container`}
+                    arrows={false}
+                    dotListClass={`custom-dot-list-style`}
+                    itemClass={`carousel-item-padding-40-px d-flex align-items-stretch mt-3 px-2`}
+                    // focusOnSelect={true}
+                    // partialVisbile={true}
+                    centerMode={true}
+                >
+                    {fakeData.map((x) => (
+                        <div className={styles.box} key={x.id}>
+                            <div className="row">
+                                <div className="col-md-3 col-sm-3">
+                                    <img
+                                        src={x.img}
+                                        alt=""
+                                        className={styles.img}
+                                    />
+                                </div>
+                                <div className="col-md-9 col-sm-9">
+                                    <p className={styles.name}>{x.name}</p>
+                                    <p className={styles.profession}>
+                                        {x.profession}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <p className={styles.msg}>{x.message}</p>
+                            </div>
+                        </div>
+                    ))}
+                </Carousel>
             </div>
-
-            <Carousel
-                swipeable={true}
-                draggable={true}
-                showDots={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                keyBoardControl={false}
-                customTransition="transform 400ms ease-in-out"
-                transitionDuration={500}
-                containerClass={`carousel-container`}
-                arrows={false}
-                dotListClass={`custom-dot-list-style`}
-                itemClass={`carousel-item-padding-40-px d-flex align-items-stretch mt-3 px-2`}
-                // focusOnSelect={true}
-                // partialVisbile={true}
-                centerMode={true}
-            >
-                {fakeData.map((x) => (
-                    <div className={styles.box} key={x.id}>
-                        <div className="row">
-                            <div className="col-md-3 col-sm-3">
-                                <img
-                                    src={x.img}
-                                    alt=""
-                                    className={styles.img}
-                                />
-                            </div>
-                            <div className="col-md-9 col-sm-9">
-                                <p className={styles.name}>{x.name}</p>
-                                <p className={styles.profession}>
-                                    {x.profession}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <p className={styles.msg}>{x.message}</p>
-                        </div>
-                    </div>
-                ))}
-            </Carousel>
-        </div>
+       </div>
     );
 }
 

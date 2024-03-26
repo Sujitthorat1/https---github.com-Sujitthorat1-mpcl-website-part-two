@@ -1,117 +1,9 @@
-// Navbar.js
-/*import React, { useState } from 'react';
-import './navbar.scss';
-import { AiFillCloseCircle } from 'react-icons/ai';
-import { TbGridDots } from 'react-icons/tb';
-import logo from '../../assets/img/mpcl/mpcl-black-logo.png';
-import { Link, NavLink } from 'react-router-dom';
-const Navbar = () => {
-  const [active, setActive] = useState('navBar');
-  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
-
-  const showNav = () => {
-    setActive('navBar activeNavbar');
-  };
-
-  const closeNav = () => {
-    setActive('navBar');
-    setShowAboutDropdown(false); // Close dropdown when closing the navbar
-  };
-
-  const toggleAboutDropdown = () => {
-    setShowAboutDropdown((prev) => !prev);
-  };
-
-  return (
-    <section className="navBarSection">
-      <header className="header flex">
-        <div className="logoDev">
-          <Link Link="/" className="logo flex">
-            <img src={logo} className="logoIcon" alt="mpcl-logo" />
-          </Link>
-        </div>
-
-        <div className={active}>
-          <ul className="navLists flex">
-            <li className="navItem">
-              <Link to="/" className={`navLink`}>
-                Home
-              </Link>
-            </li>
-            <li className="navItem">
-              <Link to="/" className="navLink " onClick={toggleAboutDropdown}>
-                About MPCL
-              </Link>
-              {showAboutDropdown && (
-                <div className="aboutDropdown">
-                
-                  <NavLink to="/aboutMpcl/about">About</NavLink>
-                  <NavLink to="/aboutMpcl/gallery">Gallery</NavLink>
-
-                  <Link href="#">Annual Return</Link>
-                  <Link href="#">Artificial Intelligence</Link>
-                  <Link href="#">Big Data</Link>
-                  <Link href="#">Gallery</Link>
-             
-                  <Link href="#">Data Encryption and Key Management Solutions</Link>
-                  <Link href="#">Data Protection and Disaster Management</Link>
-                  <Link href="#">Data Science Platform</Link>
-                  <Link href="#">Enquire Now</Link>
-                  <Link href="#">FMS</Link>
-                  <Link href="#">Build</Link>
-                  <Link href="#">GPU and FPGA Solutions</Link>
-                  <Link href="#">Introduction NVIDIA Offerings</Link>
-                  <Link href="#">Investors </Link>
-                  <Link href="#">Large Scale IT asset roll-out</Link>
-                  <Link href="#">MGT-7 22-23</Link>
-                  <Link href="#">Networking and Security Solutions</Link>
-                </div>
-              )}
-            </li>
-            <li className="navItem">
-              <NavLink to="/career" className="navLink">
-                Career
-              </NavLink>
-            </li>
-            <li className="navItem">
-              <Link to="/services" className="navLink">
-                Services
-              </Link>
-            </li>
-            <li className="navItem">
-              <Link href="#" className="navLink">
-                Contact US
-              </Link>
-            </li>
-            <li className="navItem">
-              <button className="btn">
-                <Link href="/blog" className='navLink'>BLOG</Link>
-              </button>
-            </li>
-          </ul>
-
-          <div onClick={closeNav} className="closeNavbar ">
-            <AiFillCloseCircle className="icon" />
-          </div>
-        </div>
-
-        <div onClick={showNav} className="toggleNavbar">
-          <TbGridDots className="icon" />
-        </div>
-      </header>
-    </section>
-  );
-};
-
-export default Navbar;
-
-*/
 import React, { useState, useEffect } from "react";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import styles from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/img/mpcl/mpcl-black-logo.png";
+import logo from "../../assets/img/mpcl/mpcl-logo.png";
 
 const NavbarMain = () => {
   const [showAbout, setShowAbout] = useState(false);
@@ -176,7 +68,8 @@ const NavbarMain = () => {
         sticky="top"
         onToggle={() => { closeNav() }}
       >
-        <Container>
+
+        <Container >
           <Navbar.Brand href="/" className={styles.lo}>
             <img src={logo} alt="mpcl-log.png" className={styles.imageLogo} />
           </Navbar.Brand>
@@ -296,3 +189,113 @@ const NavbarMain = () => {
 };
 
 export default NavbarMain;
+
+
+/*
+import React, { useState } from 'react';
+import './navbar.scss';
+import { AiFillCloseCircle } from 'react-icons/ai';
+import { TbGridDots } from 'react-icons/tb';
+import logo from '../../assets/img/mpcl/mpcl-black-logo.png';
+import { Link, NavLink } from 'react-router-dom';
+const Navbar = () => {
+  const [active, setActive] = useState('navBar');
+  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
+
+  const showNav = () => {
+    setActive('navBar activeNavbar');
+  };
+
+  const closeNav = () => {
+    setActive('navBar');
+    setShowAboutDropdown(false); // Close dropdown when closing the navbar
+  };
+
+  const toggleAboutDropdown = () => {
+    setShowAboutDropdown((prev) => !prev);
+  };
+
+  return (
+    <section className="navBarSection">
+      <header className="header flex">
+        <div className="logoDev">
+          <Link Link="/" className="logo flex">
+            <img src={logo} className="logoIcon" alt="mpcl-logo" />
+          </Link>
+        </div>
+
+        <div className={active}>
+          <ul className="navLists flex">
+            <li className="navItem">
+              <Link to="/" className={`navLink`}>
+                Home
+              </Link>
+            </li>
+            <li className="navItem">
+              <Link to="/" className="navLink " onClick={toggleAboutDropdown}>
+                About MPCL
+              </Link>
+              {showAboutDropdown && (
+                <div className="aboutDropdown">
+                
+                  <NavLink to="/aboutMpcl/about">About</NavLink>
+                  <NavLink to="/aboutMpcl/gallery">Gallery</NavLink>
+
+                  <Link href="#">Annual Return</Link>
+                  <Link href="#">Artificial Intelligence</Link>
+                  <Link href="#">Big Data</Link>
+                  <Link href="#">Gallery</Link>
+             
+                  <Link href="#">Data Encryption and Key Management Solutions</Link>
+                  <Link href="#">Data Protection and Disaster Management</Link>
+                  <Link href="#">Data Science Platform</Link>
+                  <Link href="#">Enquire Now</Link>
+                  <Link href="#">FMS</Link>
+                  <Link href="#">Build</Link>
+                  <Link href="#">GPU and FPGA Solutions</Link>
+                  <Link href="#">Introduction NVIDIA Offerings</Link>
+                  <Link href="#">Investors </Link>
+                  <Link href="#">Large Scale IT asset roll-out</Link>
+                  <Link href="#">MGT-7 22-23</Link>
+                  <Link href="#">Networking and Security Solutions</Link>
+                </div>
+              )}
+            </li>
+            <li className="navItem">
+              <NavLink to="/career" className="navLink">
+                Career
+              </NavLink>
+            </li>
+            <li className="navItem">
+              <Link to="/services" className="navLink">
+                Services
+              </Link>
+            </li>
+            <li className="navItem">
+              <Link href="#" className="navLink">
+                Contact US
+              </Link>
+            </li>
+            <li className="navItem">
+              <button className="btn">
+                <Link href="/blog" className='navLink'>BLOG</Link>
+              </button>
+            </li>
+          </ul>
+
+          <div onClick={closeNav} className="closeNavbar ">
+            <AiFillCloseCircle className="icon" />
+          </div>
+        </div>
+
+        <div onClick={showNav} className="toggleNavbar">
+          <TbGridDots className="icon" />
+        </div>
+      </header>
+    </section>
+  );
+};
+
+export default Navbar;
+
+*/

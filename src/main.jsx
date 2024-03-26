@@ -13,6 +13,7 @@ import ContactUs from './views/contactUs/contactUs.jsx'
 import Ai from './components/Services/AI/Ai.jsx'
 import Policies from './components/Investors/Policies.jsx'
 import AnnualReturns from './components/Investors/AnnualReturns.jsx'
+import History from './components/About/History/History.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,14 +21,19 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
+      
       { path: "/about/career", element: <Career /> },
+
+      { path: "/about/history", element:<History/> },
       { path: "/gallery", element: <GalleryComponent /> },
       { path: "/services", element: <MainBody /> },
       { path: "/services/ai", element: <Ai /> },
       { path: "/contactUs", element: <ContactUs /> },
 
       { path: "/investors/policies", element: <Policies /> },
-      { path: "/investors/annulReturns", element: <AnnualReturns /> }
+      {
+        path: "/investors/annulReturns", element: <AnnualReturns />
+      }
 
 
 
